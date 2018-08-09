@@ -2,11 +2,9 @@ package com.eattogether.controller;
 
 import java.util.List;
 
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.eattogether.domain.UserGroupDTO;
 import com.eattogether.entity.UserGroup;
@@ -36,6 +34,5 @@ public class UserGroupController {
     public List<UserGroup> getAllUserGroups(){
         return userGroupService.getAllUserGroups();
     }
-
 
 }
