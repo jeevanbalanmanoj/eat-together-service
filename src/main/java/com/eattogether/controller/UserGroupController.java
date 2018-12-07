@@ -27,6 +27,11 @@ public class UserGroupController {
     public String addUserGroup(@RequestBody UserGroupDTO groupDTO){
     	UserGroup group = new UserGroup();
     	group.setName(groupDTO.getName());
+    	group.setVacancy(groupDTO.getVacancy());
+    	group.setTopic(groupDTO.getTopic());
+    	group.setLanguage(groupDTO.getLanguage());
+    	group.setGroupSize(groupDTO.getGroupSize());
+    	group.setFoodPreference(groupDTO.getFoodPreference());
         return userGroupService.addUserGroup(group);
     }
 
